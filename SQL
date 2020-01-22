@@ -1,0 +1,19 @@
+wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+sudo rpm -ivh mysql-community-release-el7-5.noarch.rpm
+yum update
+
+
+sudo yum install mysql-server
+sudo systemctl start mysqld
+
+sudo mysql_secure_installation
+
+
+sudo grep 'temporary password' /var/log/mysqld.log
+
+
+
+mysql -u root -p
+
+
+https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-centos-7
